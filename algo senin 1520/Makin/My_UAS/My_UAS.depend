@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1481695059 source:d:\documen\my_uas\main.cpp
+	<iostream>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+
+1481695060 source:h:\makin\my_uas\main.cpp
+	<iostream>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+

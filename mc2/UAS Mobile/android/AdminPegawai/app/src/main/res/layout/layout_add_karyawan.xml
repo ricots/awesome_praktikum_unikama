@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_add_karyawan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.erif.adminpegawai.home.add.AddKaryawan">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/addKaryawan_layNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/addKaryawan_edNamaKaryawan"
+                    android:hint="Nama Karyawan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/addKaryawan_Jabatan"
+                android:layout_below="@+id/addKaryawan_layNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dialog"/>
+
+
+            <RadioGroup
+                android:id="@+id/addKaryawan_RadioGroup"
+                android:layout_below="@+id/addKaryawan_Jabatan"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/addKaryawan_RadioPria"
+                    android:text="Pria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/addKaryawan_RadioWanita"
+                    android:text="Wanita"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/addKaryawan_layUsia"
+                android:layout_below="@+id/addKaryawan_RadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/addKaryawan_edUsia"
+                    android:hint="Usia Karyawan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/addKaryawan_layAlamat"
+                android:layout_below="@+id/addKaryawan_layUsia"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:padding="5dp"
+                android:background="#fff">
+
+                <EditText
+                    android:id="@+id/addKaryawan_edAlamat"
+                    android:hint="Alamat Karyawan"
+                    android:inputType="textMultiLine"
+                    android:background="@color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/addKaryawan_layPhoto"
+                android:layout_below="@+id/addKaryawan_layAlamat"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/addKaryawan_ImgPreview"
+                    android:layout_width="150dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_height="170dp" />
+                <Button
+                    android:id="@+id/addKaryawan_btnUpload"
+                    android:text="Upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                android:layout_below="@+id/addKaryawan_layPhoto"
+                android:id="@+id/addKaryawan_btnSimpan"
+                android:text="Simpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+    </ScrollView>
+
+
+
+</android.support.percent.PercentRelativeLayout>

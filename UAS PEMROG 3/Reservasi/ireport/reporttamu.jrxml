@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporttamu" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d37caf33-af74-4208-aed4-f65a43745f56">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="107"/>
+	<property name="ireport.y" value="42"/>
+	<queryString language="SQL">
+		<![CDATA[select * from tamu]]>
+	</queryString>
+	<field name="id_tamu" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cek_in" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_kamar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cek_out" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_tlp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="353" y="36" width="100" height="20" uuid="f348abcb-39ce-4ad8-9ad9-caa4c0c360d9"/>
+				<text><![CDATA[Laporan Data Tamu]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="53" y="2" width="100" height="20" uuid="9452dda4-ca85-4f4c-b305-7fd271d12dfd"/>
+				<text><![CDATA[id_tamu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="153" y="2" width="100" height="20" uuid="2cab30e8-783c-452c-affc-12af09d0ee25"/>
+				<text><![CDATA[nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="2" width="100" height="20" uuid="bda0571d-ae04-4568-871a-092cc026baef"/>
+				<text><![CDATA[alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="353" y="2" width="100" height="20" uuid="2d3465b7-fd94-460c-93cc-9f4055a42ad5"/>
+				<text><![CDATA[cek_in]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="453" y="2" width="100" height="20" uuid="a8df953f-e2a6-4393-84d2-43e14ccd1043"/>
+				<text><![CDATA[no_kamar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="553" y="2" width="100" height="20" uuid="a40e6e0e-7318-4613-8c4d-9670a82be2a1"/>
+				<text><![CDATA[cek_out]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="653" y="2" width="100" height="20" uuid="3c23846c-27e8-46fe-9b3c-d2c0d0bed5de"/>
+				<text><![CDATA[no_tlp]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="53" y="0" width="100" height="20" uuid="a20e8e90-41bf-4f3a-a04e-d41d59f1398a"/>
+				<textFieldExpression><![CDATA[$F{id_tamu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="153" y="0" width="100" height="20" uuid="4813e73f-7bf8-4209-aac5-69cda67be16f"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="253" y="0" width="100" height="20" uuid="ca1fb738-54c0-4317-b146-c69f463d6417"/>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="0" width="100" height="20" uuid="7e4b833c-dc6a-49b8-90fd-7dd5e69bb1e5"/>
+				<textFieldExpression><![CDATA[$F{cek_in}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="0" width="100" height="20" uuid="09bbc590-cfc6-48ee-957f-a31b9531701c"/>
+				<textFieldExpression><![CDATA[$F{no_kamar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="553" y="0" width="100" height="20" uuid="e0c862db-ef0e-479d-8e97-c8b10b025d27"/>
+				<textFieldExpression><![CDATA[$F{cek_out}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="653" y="0" width="100" height="20" uuid="9d14bae5-b1fb-4fb5-a749-91a2c4394b33"/>
+				<textFieldExpression><![CDATA[$F{no_tlp}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

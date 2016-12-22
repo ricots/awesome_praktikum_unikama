@@ -1,0 +1,293 @@
+#include <stdio.h>
+#include <conio.h>
+#include <iostream>
+#include <iomanip>
+#include <windows.h>
+
+using namespace std;
+//panggil
+    header() {
+    cout<<  "=====================================================\n"
+            "                       P A M                         \n"
+            "                  Pesan Antar Makan                  \n"
+            "-----------------------------------------------------\n"
+            "        Anda Lapar tinggal pesan, Makanan datang     \n"
+            "=====================================================\n";}
+
+    garis() {
+    cout<<  "-----------------------------------------------------\n";}
+
+    main(){
+
+//Deklarasi Variable
+   int i,j;
+   int byk_bel[30],harga[30];
+   char lagi,lanjut,paket,plh;
+   string Norek,Nopin;
+   char kode_ma[30],*makan[30];
+   long int jml_hrg=0,sub_hrg[30];
+
+   system("cls");
+
+//awal
+   awal:
+   system("cls");
+   header();
+   cout<<endl;
+   cout<<"1. Menu\n";
+   cout<<"2. Paket\n";
+   cout<<"3. Hot Promo\n";
+   cout<<"4. Lokasi Outlet\n";
+   cout<<"5. Informasi\n";
+   cout<<"6. Keluar\n";
+   garis();
+
+   cout<<"Masukan pilihan anda : ";cin>>plh;
+   if(plh=='1'||plh=='1')
+    goto menu;
+   else if(plh=='2'||plh=='2')
+    goto paket;
+   else if(plh=='3'||plh=='3')
+    goto hotpromo;
+   else if(plh=='4'||plh=='4')
+    goto lokasi;
+   else if(plh=='5'||plh=='5')
+    goto informasi;
+   else if(plh=='6'||plh=='6')
+    goto keluar;
+   else
+    goto awal;
+//1. Makanan
+   menu:
+   system("cls");
+   header();
+   cout<<endl;
+   cout<<"               MENU MAKANAN DAN MINUMAN      \n";
+   garis();
+   cout<<"   KODE MAKANAN           ||     KODE MINUMAN\n"<<endl;
+   cout<<"A. Ayam Penyet            ||   I. Kopi       \n";
+   cout<<"B. Bebek Goreng           ||   J. Es Teh     \n";
+   cout<<"C. Lele Goreng            ||   K. Susu       \n";
+   cout<<"D. Bakmie                 ||   L. Es Campur  \n";
+   cout<<"E. Bakso                  ||   M. Es Cendol  \n";
+   cout<<"F. Gado-gado              ||   N. Es Degan   \n";
+   cout<<"G. Nasi Goreng            ||                 \n";
+   cout<<"H. Nasi                   ||                 \n";
+
+   garis();
+   cout<<"Banyak Item               : ";cin>>j;
+   garis();
+   {
+    for(i=1;i<=j;i++)
+   {
+   cout<<"  Item Ke"<<i<<endl;
+   cout<<"Kode Makanan/Minuman      : ";cin>>kode_ma[i];
+   cout<<"Banyaknya                 : ";cin>>byk_bel[i];
+    garis();
+   }
+   for(i=1;i<=j;i++)
+   {
+
+    if(kode_ma[i]=='A'|| kode_ma[i]=='a'){
+       makan[i]="Ayam Penyet";
+       harga[i]=8000;}
+    else if(kode_ma[i]=='B'||kode_ma[i]=='b'){
+       makan[i]="Bebek Goreng";
+       harga[i]=12000;}
+    else if(kode_ma[i]=='C'||kode_ma[i]=='c'){
+       makan[i]="Lele goreng";
+       harga[i]=7000;}
+    else if(kode_ma[i]=='D'||kode_ma[i]=='d'){
+       makan[i]="Bakmie";
+       harga[i]=8000;}
+    else if(kode_ma[i]=='E'||kode_ma[i]=='e'){
+       makan[i]="Bakso";
+       harga[i]=7000;}
+    else if(kode_ma[i]=='F'||kode_ma[i]=='f'){
+       makan[i]="Gado-gado";
+       harga[i]=8000;}
+    else if(kode_ma[i]=='G'||kode_ma[i]=='g'){
+       makan[i]="Nasi goreng";
+       harga[i]=8000;}
+    else if(kode_ma[i]=='H'||kode_ma[i]=='h'){
+       makan[i]="Nasi";
+       harga[i]=3000;}
+    else if(kode_ma[i]=='I'||kode_ma[i]=='i'){
+       makan[i]="Kopi";
+       harga[i]=3000;}
+    else if(kode_ma[i]=='J'||kode_ma[i]=='j'){
+       makan[i]="Es Teh";
+       harga[i]=3000;}
+    else if(kode_ma[i]=='K'||kode_ma[i]=='k'){
+       makan[i]="Susu";
+       harga[i]=3000;}
+    else if(kode_ma[i]=='L'||kode_ma[i]=='l'){
+       makan[i]="Es Campur";
+       harga[i]=8000;}
+    else if(kode_ma[i]=='M'||kode_ma[i]=='m'){
+       makan[i]="Es Cendol";
+       harga[i]=6000;}
+    else if(kode_ma[i]=='N'||kode_ma[i]=='n'){
+       makan[i]="Es Degan";
+       harga[i]=4000;}
+    else{
+       makan[i]="Kode Salah";
+       harga[i]=0;}
+   }
+   garis();
+}
+   system("cls");
+
+//1.b Jumlah
+   header();
+   cout<<"No.| Makanan       |  Harga  | Jumlah |    Sub       \n";
+   cout<<"   | Minuman       |  Porsi  | Beli   |    Harga     \n";
+   garis();
+
+for(i=1;i<=j;i++)
+   {
+      sub_hrg[i]= byk_bel[i]*harga[i];
+      cout<<setiosflags(ios::left)<<setw(0)<<i<<". ";
+      cout<<setiosflags(ios::left)<<setw(2)<<makan[i];
+      cout<<setiosflags(ios::right)<<setw(12)<<harga[i];
+      cout<<setiosflags(ios::right)<<setw(8)<<byk_bel[i];
+      cout<<setiosflags(ios::right)<<setw(15)<<sub_hrg[i]<<endl;
+      jml_hrg=jml_hrg+sub_hrg[i];
+   }
+   garis();
+   cout<<"                          Jumlah Harga   Rp. "<<jml_hrg<<endl;
+   garis();
+   cout<<"Masukan Nomor Rekening : "; cin>>Norek;
+   cout<<"Masukan Nomor Pin      : "; cin>>Nopin;
+   garis();
+   cout<<"Terima kasih telah memesan   'P A M'      \n"
+         "anda membeli pada menu makanan dan minuman\n"
+         "dengan harga Rp."<<jml_hrg;
+   cout<<", sedang di proses \n";
+   garis();
+   cout<<"Kembali ke awal "; cin>>lanjut;
+        if(lanjut=='Y'||lanjut=='y')
+            goto awal;
+        else
+            goto awal;
+        system("cls");
+
+//2. Paket
+    paket:
+    system("cls");
+    header();
+{
+    cout<<endl;
+    cout<<" Pilihan paket         \n"
+          "1. Keluarga (5  orang) \n"
+          "2. Pesta    (15 orang) \n";
+    garis();
+    cout<<"Pilih Paket :"; cin>>paket;
+        if(paket=='1'||paket=='1'){
+            cout<<"Paket Keluarga";
+            cout<<"Masukan Nomor Rekening : "; cin>>Norek;
+            cout<<"Masukan Nomor Pin      : "; cin>>Nopin;
+            cout<<"Terima kasih telah memesan   P A M"
+                  "anda membeli paket keluarga untuk 5 orang"
+                  "dengan harga Rp.50.000, sedang di proses";}
+
+        else if (paket=='2'||paket=='2'){
+            cout<<"Paket Pesta";
+            cout<<"Masukan Nomor Rekening : "; cin>>Norek;
+            cout<<"Masukan Nomor Pin      : "; cin>>Nopin;
+            cout<<"Terima kasih telah memesan   P A M"
+                  "anda membeli paket keluarga untuk 15 orang"
+                  "dengan harga Rp.130.000, sedang di proses";}
+        else {
+            goto paket;}
+    }
+        system("cls");
+
+//3. Hot Promo
+    hotpromo:
+    system("cls");
+    header();
+    cout<<endl;
+    cout<<"hot promo makan berdua dengan harga Rp.150.000\n";
+    cout<<"Apakah anda ingin membeli [Y/T] : "; cin>>lanjut;
+    garis();
+        if(lanjut=='Y'||lanjut=='y')
+            goto lanjut;
+        else
+            goto awal;
+        system("cls");
+    lanjut:
+    cout<<"Masukan Nomor Rekening : "; cin>>Norek;
+    cout<<"Masukan Nomor Pin      : "; cin>>Nopin;
+    garis();
+    cout<<"Terima kasih telah memesan   'P A M'     \n"
+          "anda membeli hot promo makan berdua      \n"
+          "dengan harga Rp.150.000, sedang di proses\n";
+    garis();
+    cout<<"Kembali ke awal "; cin>>lanjut;
+    garis();
+        if(lanjut=='Y'||lanjut=='y')
+            goto awal;
+        else
+            goto awal;
+        system("cls");
+
+//4. Lokasi Outlet
+    lokasi:
+    system("cls");
+    header();
+    cout<<endl;
+    cout<<  "                   outlet cabang 1                   \n"
+            "                Jl.S.Supriadi no.0896                \n"
+            "                                                     \n"
+            "                   outlet cabang 2                   \n"
+            "               JL.SukarnoHatta no.5420               \n"
+            "                                                     \n"
+            "                   outlet cabang 3                   \n"
+            "                  Jl.Sutoyo no.2331                  \n";
+    garis();
+    cout<<"Kembali ke awal "; cin>>lanjut;
+        if(lanjut=='Y'||lanjut=='y')
+            goto awal;
+        else
+            goto awal;
+        system("cls");
+
+
+//5. Informasi
+    informasi:
+    system("cls");
+    header();
+    cout<<endl;
+    cout<<"1. Pembayaran hanya menggunakan nomor rekening.  \n"
+          "2. Masukan alamat dengan tepat dan jelas.        \n"
+          "3. Pesanan dijamin tiba dalam 30 menit setelah   \n"
+          "   staff mengkonfirmasi pesanan Anda atau        \n"
+          "   sesuai waktu yang ditentukan pada saat order. \n";
+    garis();
+    cout<<"Kembali ke awal "; cin>>lanjut;
+        if(lanjut=='Y'||lanjut=='y')
+            goto awal;
+        else
+            goto awal;
+        system("cls");
+
+//6. konfirmasi keluar program
+   keluar:
+   system("cls");
+   header();
+   cout<<endl;
+   cout<<"Apakah anda ingin keluar [Y/T] :"; cin>>lagi;
+        if(lagi=='Y'||lagi=='y')
+            goto selesai;
+        else
+            goto awal;
+
+   selesai:
+   system("cls");
+   header();
+   cout<<endl;
+   cout<<"terima kasih telah berkunjung";
+
+   getch();
+}

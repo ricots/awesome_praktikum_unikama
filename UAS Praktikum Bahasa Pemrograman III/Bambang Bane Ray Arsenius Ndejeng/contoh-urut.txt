@@ -1,0 +1,83 @@
+<h2>Pengurutan</h2>
+		<table border="1" width="500px">			
+
+<?php
+require_once('koneksi.php');
+$query1="select * from mahasiswa order by nim ";
+
+$pola='asc';
+$polabaru='asc';
+if(isset($_GET['orderby'])){
+	$orderby=$_GET['orderby'];
+	$pola=$_GET['pola'];
+	
+	$query1="SELECT * FROM  mahasiswa order by $orderby $pola ";
+	if($pola=='asc'){
+		$polabaru='desc';
+		
+	}else{
+		$polabaru='asc';
+	}
+}
+?>
+<th>
+				<td><a href='mahasiswa2.php?orderby=nim&pola=<?=$polabaru;?>'>Nim</a></td>
+				<td><a href='mahasiswa2.php?orderby=nama&pola=<?=$polabaru;?>'>Nama</a></td>
+				<td>IPK</td><td>Jurusan</a></td>
+</th>
+				
+<?php
+//query database 
+$result=mysql_query($query1) or die(mysql_error());
+$no=1; //penomoran 
+
+
+while($rows=mysql_fetch_object($result)){
+			?>
+			<tr>
+				<td><?php echo $no
+				?></td>
+				<td><?php		echo $rows -> nim;?></td>
+				<td><?php		echo $rows -> nama;?></td>
+				<td align='right'><?php		echo $rows -> ipk;?></td>
+				<td><?php		echo $rows -> jurusan;?></td>
+			</tr>
+			<?php
+$no++;
+}?>
+		</table>
+
+
+
+<?php
+    include ("koneksi.php");
+    $perintah = "select * from m_mahasiswa limit 10";
+    $hasil=mysql_query($perintah);
+
+?>
+<table border=1 cellpadding='1' cellspacing='1'>
+  <tr bgcolor="#FFCC99"> 
+    <td><strong><a href="<?php $_SERVER['PHP_SELF']?>?by=nim">NIM</a></strong></td>
+    <td><strong><a href="<?php $_SERVER['PHP_SELF']?>?by=nm_mahasiswa"> Mahasiswa </a></strong></td>
+    <td ><strong><a href="<?php $_SERVER['PHP_SELF']?>?by=no_telp">No Telp</a></strong></td>
+    <td ><strong><a href="<?php $_SERVER['PHP_SELF']?>?by=keterangan"> Keterangan</a></strong></td>
+  </tr>
+  <tr>
+  <?php 
+if ($_GET['by'] == "nim") $orderBy = "nim";
+else if ($_GET['by'] == "nm_mahasiswa") $orderBy = "nm_mahasiswa";
+else if ($_GET['by'] == "no_telp") $orderBy = "no_telp";
+else if ($_GET['by'] == "keterangan") $orderBy = "keterangan";
+else $orderBy = "nim";
+
+        $perintah = "select * from m_mahasiswa order by $orderBy asc";
+        $hasil=mysql_query($perintah);
+        while ($data=mysql_fetch_array($hasil)){    
+
+        echo "<td> $data[nim]</td>";
+    echo "<td>$data[nm_mahasiswa]</td>";
+    echo "<td>$data[no_telp]</td>";
+    echo "<td>$data[keterangan]</td>";
+    }
+    ?></tr>
+</table>

@@ -1,0 +1,254 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+text-decoration:none;
+}
+th{
+text-align:center;	
+}
+a{
+color:#00F;
+}
+a:hover{
+color:#F00;	
+}
+.perintah{
+color:#666;	
+}
+#home{
+font-family:"Times New Roman", Times, serif;
+font-size:24px;
+padding-top:20px;
+}
+#atas{
+background-color:#900;
+padding:15px 0 15px 950px;
+position:relative;
+
+border-radius:5px;
+top:30px;
+}
+#atassuper{
+background-color:#900;
+padding:15px 0 40px 950px;
+position:relative;
+
+border-radius:5px;
+top:30px;
+}
+#header {
+	position: relative;
+	background-repeat: no-repeat;
+	background-image:url(../images/header.jpg);
+	top:50px;
+	margin:0;
+	left:250px;
+	width: 1100px;
+	border: 1px solid #737373;
+	padding-top: 90px;
+	text-align: left;
+	background-color:#F5F5F5;
+	border-radius:5px;
+}
+.login{
+background-color:#0F0;
+border-radius:5px;	
+width :100px;
+height:25px;
+}
+.login:hover{
+background-color:#0C0;	
+}
+
+#content {
+	margin-left: 0px;
+	padding: 70px 0px 10px 20px;
+}
+#content p {
+	font-size: 75%;
+	line-height: 1.8em;
+	padding-left: 2em;
+}
+#menu {
+	position: absolute;
+	top: 115px;
+	left: 0px;
+	width: 180px;
+	
+	
+}
+#menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+	
+}
+#menu li {
+	width: 250px;
+	border-bottom: 1px solid #969BA5;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	vertical-align: bottom; 
+	
+}
+#menu a:link, #menu a:visited {
+	display: block;
+	background-color:#0F3;
+	border-radius:1px;
+	padding: 5px 5px 5px 0.5em;
+	border-left: 12px solid #ff0000;
+	border-right: 1px solid #265180;
+	background-color: #F5F5F5;
+	color: #000;
+	text-decoration: none;
+	
+}
+#menu a:hover {
+	background-color: #737373;
+	color: #FFFFFF;
+}
+.submit{
+background-color:#F00;
+color:#FFF;
+border-radius:5px;
+height:30px;
+width:auto;	
+}
+.submit:hover{
+background-color:#900;	
+}
+th{
+background-color:#000;
+color:#FFF;
+padding-right:5px;
+padding-left:5px;	
+}
+td{
+padding-bottom:5px;
+}
+
+#footer{
+	padding: 10px 0 10px 500px;
+	font-size: 15px;
+	color: #FFF;
+	margin:auto;
+	background-color:#000000;
+	
+}
+
+.submitcari{
+background-color:#F00;
+color:#FFF;
+width:auto;
+border-radius:3px;
+height:auto;
+}
+.submitcari:hover{
+background-color:#900;	
+}
+.login{	
+width:350px;
+height:auto;
+margin:auto;
+}
+
+.wrap{
+width:350px;
+height: auto;
+float:left;
+background: #F9F9F9;
+margin-top:100px;
+border-radius:5px;
+box-shadow: 0px 0px 5px #000;
+border:1px solid #DBDCD6;
+}
+.wrap .head{
+width:330px;
+height: auto;
+padding: 10px;
+font-size: 19px;
+color:#333;
+float: left;
+font-weight: bold;
+text-align: center;
+border-bottom: 1px solid #DBDCD6;
+}
+.wrap .form{
+width:330px;
+height: auto;
+padding:20px 10px;
+float: left;
+text-align: center;
+}
+.wrap .form form{
+margin:0;
+color:#555;
+font-weight: bold;
+}
+.wrap .form input[type="text"],.wrap .form input[type="password"]{
+width: 300px;
+height: auto;
+padding:10px;
+border:1px solid #ccc;
+text-align: center;
+background: #fff;
+box-shadow:inset 0px 3px 5px #CBCCC4;
+border-radius:5px;
+}
+.wrap .form input[type="text"]:focus,.wrap .form input[type="password"]:focus{
+width: 300px;
+height: auto;
+padding:10px;
+border:1px solid #BCBCBC;
+text-align: center;
+outline: none;
+box-shadow:inset 0px 3px 5px #999C8B;
+background: #fff;
+}
+.wrap .form input[type="submit"]{
+background: -webkit-linear-gradient(top ,#EAEBE7 0%,#D5D6CF 100%);
+background: -moz-linear-gradient(center top ,#EAEBE7 0%,#D5D6CF 100%);
+border:1px solid #BFC1B7;
+padding:5px 10px;
+border-radius: 3px;
+color:#5B5E51;
+font-weight: bold;
+margin-top: 5px;
+}
+.wrap .form input[type="submit"]:hover{
+color:#333;
+cursor: pointer;
+box-shadow: 0px 0px 7px #AAE8F4;
+}
+.wrap .footer{
+width:33;
+}
+
+#form {
+ 
+}
+fieldset {
+    background-color: #E1E1E1;
+}
+label {
+    display: inline-block;
+    line-height: 1.8;
+    vertical-align: top;
+    cursor: hand;
+}
+label.error {
+    width: auto;
+    display: inline;
+    color: #F60;
+    font-style: italic;
+}
+input.error {
+    border-color: #FF0000;
+}
+input.submi {
+    margin-left: 150px;
+}
+
+

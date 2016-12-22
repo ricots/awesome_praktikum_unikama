@@ -1,0 +1,43 @@
+ALGOTRITMA TENTANG : 
+
+PENJUALAN BUKU SECARA ONLINE DI TOKO “ ILMU CAHAYA ” 
+
+( Khusus untuk wilayah Malang )
+
+1. Konsumen terlebih dahulu melakukan register.
+     Inputan :
+	•	Nama      	:
+	•	Alamat    	:........,RT...,RW....
+	•	No Hp		:
+
+2. Konsumen memilih BUKU yang ingin di pesan.
+    Outputan :
+	•	Jenis BUKU dan harga BUKU
+
+    Inputan :
+	•	Jenis BUKU	:
+	•	Judul BUKU	:
+
+3. Konsumen menginputakan jumlah pembelian BUKU yang ingin di pesan.
+    outputan :
+	•	Jumlah BUKU  :
+
+
+4.	satu jenis BUKU memiliki ongkir yang sama ke seluruh wilayah Malang. 
+
+	
+5. Melakukan perhitungan subtotal di mana (total = harga BUKU X jumlah BUKU + ongkir).
+
+
+6. konsumen melakukan pembayaran dengan cara transfer melalui BANK atau ATM.
+	Atas nama   : Mukidi
+	No Rekening : 0178305704
+
+
+7. Konsumen menentukan hari/tanggal pengiriman.
+    Inputan :
+	•	Hari/tanggal pengiriman   :
+
+8. Jika konsumen merasa ingin membeli buku yang lain maka bisa langsung ke menu pembelian buku.
+
+19. jika konsumen merasa sudah puas maka bisa langsung keluar dari program.

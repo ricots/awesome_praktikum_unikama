@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1480842873 source:e:\uas_prak\src\aa.cpp
+	"aa.h"
+
+1480842873 e:\uas_prak\include\aa.h
+
+1481386193 source:e:\uas_prak\main.cpp
+	<stdio.h>
+	<conio.h>
+	<iostream>
+	<iomanip>
+	<windows.h>
+
+1480866565 source:e:\uas_prak\src\uas.cpp
+	"uas.h"
+
+1480866565 e:\uas_prak\include\uas.h
+

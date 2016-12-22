@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/warna"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity4" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="WISATA BLITAR"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:text="Sumber Udel Park"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:src="@drawable/sumberudel" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sumber" />
+            
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Museum Bung Karno"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:src="@drawable/bung" />
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/makam" />
+            
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kebun Teh Sirah Kencong"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:src="@drawable/sirahkencong" />
+            
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sirah" />
+
+            
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

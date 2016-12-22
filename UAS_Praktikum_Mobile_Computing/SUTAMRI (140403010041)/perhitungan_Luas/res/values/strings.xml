@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="judul">Perhitungan luas</string>
+    <string name="segitga">Hitung luas segtiga</string>
+    <string name="segiempat">Hitung Luas Segiempat</string>
+    <string name="luas">Hitung Luas</string>
+    <string name="alas">Alas : </string>
+    <string name="tinggi">Tinggi : </string>
+    <string name="hitung">Hitung luas segitiga</string>
+    <string name="luasadl">Luas adalah :</string>
+    <string name="panjang">Panjang :</string>
+    <string name="lebar">Lebar :</string>
+    <string name="jari">Masukkan Jari-jari</string>
+    <string name="lingkaran">Hitung Luas Lingkaran</string>
+    <string name="persegi_panjang">Persegi_Panjang</string>
+    <string name="persegipanjang">persegipanjang</string>
+
+</resources>
